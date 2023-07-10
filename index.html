@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <h1>It's all about JavaScript <br> Array Reference VS copy  <br>Inspect to see what i have done <br>Go to console</h1>
+    
+   <ol>
+    <li>
+        const players = ['Wes', 'Sarah', 'Ryan', 'Poppy']; <br>
+        const team = players; <br>
+        console.log(players, team); <br>
+       
+
+
+
+    </li>
+    <li>
+        const team2 = players.slice(); <br>
+        const team3 = [].concat(players); <br>
+        const team4 = [...players]; <br>
+        team4[3] ='heeee haww'; <br>
+        console.log(team4); <br>
+    </li>
+
+
+    <li>
+        const team5 = Array.from(players) <br>
+    </li>
+    <li>
+        const wes = { <br>
+            name: 'wes', <br>
+            age: 100, <br>
+            social: { <br>
+                twitter: '@wesbos', <br>
+                facebook: 'wesbos.developer' <br>
+
+            } <br>
+        }; <br>
+
+        console.clear(); <br>
+        console.log(wes); 
+    </li>
+    <li>
+        const dev = Object.assign({}, wes); <br>
+
+        const dev2 = JSON.parse(JSON.stringify(wes)); <br>
+    </li>
+   </ol>
+  
+    <style>
+
+        body {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(./street.jpg);
+   /* background-image: url(./image/street.jpg); */
+   background-size: cover;
+   background-repeat: repeat;
+   color: white;
+   font-size:xx-large;
+}
+
+h1 {
+   text-align: center;
+
+}
+
+li {
+   color: white;
+   font-size:3vh;
+}
+    </style>
+
+    <script>
+            
+        const players = ['Wes', 'Sarah', 'Ryan', 'Poppy']; 
+        const team = players; 
+        console.log(players, team); 
+       
+
+
+
+    
+        const team2 = players.slice(); 
+        const team3 = [].concat(players);
+        const team4 = [...players]; 
+        team4[3] ='heeee haww'; 
+        console.log(team4); 
+    
+
+
+    
+        const team5 = Array.from(players) 
+  
+        const wes = { 
+            name: 'wes', 
+            age: 100, 
+            social: { 
+                twitter: '@wesbos', 
+                facebook: 'wesbos.developer' 
+
+            } 
+        }; 
+
+        // console.clear(); 
+        console.log(wes); 
+   
+        const dev = Object.assign({}, wes); 
+
+        const dev2 = JSON.parse(JSON.stringify(wes)); 
+
+    </script>
+    
+</body>
+</html>
